@@ -40,7 +40,7 @@ def add_task(request):
             todos_collection.insert_one({
                 'name': task_name,
                 'datetime': task_datetime,
-                'created_at': datetime.datetime.now()
+                'created_at': datetime.now()
             })
             return redirect('home')  # Redirect to home after adding
     return render(request, 'add_task.html')  # Render add task form if GET request
